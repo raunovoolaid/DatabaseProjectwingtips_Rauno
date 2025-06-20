@@ -20,6 +20,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore DatabaseProjectwingtips_Rauno.sqlproj
     - name: Build
-      run: dotnet build DatabaseProjectwingtips_Rauno.sqlproj --no-restore
+      run: dotnet build DatabaseProjectwingtips_Rauno.sqlproj --no-restore /p:RunSqlCodeAnalysis=true
     - name: Publish SQL project
       run: sqlpackage /Action:Publish /SourceFile:bin/Debug/DatabaseProjectwingtips_Rauno.dacpac /TargetConnectionString:${{ secrets.SQL_CONNECTION_STRING }}
