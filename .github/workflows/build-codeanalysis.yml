@@ -17,4 +17,4 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Build
-      run: dotnet build DatabaseProjectwingtips_Rauno/DatabaseProjectwingtips_Rauno.sqlproj /p:RunSqlCodeAnalysis=true
+      run: dotnet build DatabaseProjectwingtips_Rauno.sqlproj /p:RunSqlCodeAnalysis=true
