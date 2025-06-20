@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore DatabaseProjectwingtips_Rauno/DatabaseProjectwingtips_Rauno.sqlproj
+      run: dotnet restore DatabaseProjectwingtips_Rauno.sqlproj
     - name: Build
-      run: dotnet build DatabaseProjectwingtips_Rauno/DatabaseProjectwingtips_Rauno.sqlproj --no-restore
+      run: dotnet build DatabaseProjectwingtips_Rauno.sqlproj --no-restore
     - name: Publish SQL project
       run: sqlpackage /Action:Publish /SourceFile:DatabaseProjectwingtips_Rauno/bin/Debug/DatabaseProjectwingtips_Rauno.dacpac /TargetConnectionString:${{ secrets.SQL_CONNECTION_STRING }}
