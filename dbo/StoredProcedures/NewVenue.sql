@@ -17,7 +17,6 @@
           RAISERROR ('Error. @VenueName must be specified', 11, 1)
           RETURN 1
       END
-      /*TEST TRIGGER YAML*/
   
       -- Insert Venue
       INSERT INTO [dbo].Venues
