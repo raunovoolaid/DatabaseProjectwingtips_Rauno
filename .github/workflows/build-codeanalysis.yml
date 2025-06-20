@@ -3,12 +3,8 @@ name: Build SQL project with code analysis
 on:
   push:
     branches: [ "master" ]
-    paths:
-      - 'DatabaseProjectwingtips_Rauno/**'
   pull_request:
     branches: [ "master" ]
-    paths:
-      - 'DatabaseProjectwingtips_Rauno/**'
 
 jobs:
   build:
