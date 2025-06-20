@@ -22,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build DatabaseProjectwingtips_Rauno.sqlproj --no-restore
     - name: Publish SQL project
-      run: sqlpackage /Action:Publish /SourceFile:bin/Debug/DatabaseProjectwingtips_Rauno.dacpac /TargetConnectionString:${{ secrets.SQL_CONNECTION_STRING }}
+      run: sqlpackage /Action:Publish /SourceFile:bin/Debug/DatabaseProjectwingtips_Rauno.dacpac /TargetConnectionString:${{ secrets.SQL_CONNECTION_STRING }} /TargetDatabaseName:wingtips_Rauno
